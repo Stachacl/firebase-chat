@@ -1,7 +1,19 @@
-import React from 'react'
+import React from "react";
 
-export default function Navbar() {
+// const style = {
+//     nav: `bg-amber-800`,
+//     // heading: `
+//     // top
+//     // `, bg-gray-800 h-20 flex justify-beetween items-center p-4
+
+// }
+
+const Navbar = () => {
   return (
-    <div>Navbar</div>
-  )
-}
+    <div className="bg-slate-500 p-4 z-10">
+      <h1 className>Navbar</h1>
+    </div>
+  );
+};
+
+export default Navbar;
