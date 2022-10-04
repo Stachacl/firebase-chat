@@ -1,17 +1,15 @@
 import React from "react";
 
-// const style = {
-//     nav: `bg-amber-800`,
-//     // heading: `
-//     // top
-//     // `, bg-gray-800 h-20 flex justify-beetween items-center p-4
 
-// }
+const style = {
+nav: `text-purple-600`,
+heading: `text-purple-600 text-lg text-black font-semibold`
+}
 
 const Navbar = () => {
   return (
-    <div className="bg-slate-500 p-4 z-10">
-      <h1 className>Navbar</h1>
+    <div className={style.nav}>
+      <h1 className="red">Navbar</h1>
     </div>
   );
 };
