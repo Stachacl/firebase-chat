@@ -1,4 +1,6 @@
 import React from "react";
+import { auth } from "../firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
 
 
 const style = {
@@ -7,6 +9,8 @@ heading: `text-white text-3xl`
 }
 
 const Navbar = () => {
+  const [user] = useAuthState(auth)
+  
   return (
     <div className={style.nav}>
       <h1 className={style.heading}>Navbar</h1>
