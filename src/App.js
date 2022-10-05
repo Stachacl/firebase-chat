@@ -11,7 +11,16 @@ function App() {
     <div className={style.appContainer}>
       <section className={style.sectionContainer}>
         <Navbar />
+
+        <div>
+         <img src="https://ik.imagekit.io/stcl/chat/firebase-hero_cjRPVlwHZ.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1664943643081" alt="React Logo" />
+      </div>
+
+      
       </section>
+
+      
+
     </div>
   );
 }
