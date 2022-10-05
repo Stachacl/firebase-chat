@@ -1,13 +1,19 @@
-import React from 'react'
+import React from "react";
 
 const style = {
-    main: `flex flex-col p-[10px] relative`
-}
+  main: `flex flex-col p-[10px] relative`,
+};
 
 const Chat = () => {
   return (
-    <div className={style.main}>Chat</div>
-  )
-}
+    <>
+      <main className={style.main}>
+        {/* Chat message component */}
+        </main>
+         {/* Send message component -form */}
+         <span ref={scroll}></span>
+    </>
+  );
+};
 
-export default Chat
+export default Chat;
