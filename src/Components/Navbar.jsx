@@ -2,8 +2,8 @@ import React from "react";
 
 
 const style = {
-nav: `text-purple-600`,
-heading: `text-purple-600 text-lg text-purple font-semibold`
+nav: `bg-gray-800 h-20 flex justify-beetween items-center p-4`,
+heading: `text-white text-3xl`
 }
 
 const Navbar = () => {
