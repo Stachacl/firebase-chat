@@ -6,7 +6,13 @@ const style = {
 };
 
 const Chat = () => {
-const scroll = useRef()
+  const [messages, setMessages] =useState([]);
+  const scroll = useRef()
+
+useEffect (() => {
+    const q =query(collection(db, 'firebase-chat'), orderBy('timestamp'))
+}, [])
+
   return (
     <>
       <main className={style.main}>
