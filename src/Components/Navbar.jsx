@@ -15,8 +15,8 @@ const Navbar = () => {
   return (
     <div className={style.nav}>
       <h1 className={style.heading}>Navbar</h1>
-      <Signin />
-      <LogOut />
+      {user? <LogOut /> : <Signin /> }
+ 
     </div>
   );
 };
