@@ -9,8 +9,8 @@ const  style = {
 }
 
 const SendMessage = () => {
+const [userMessage, setUserMessage] = useState ('');
 
-const [userMessage, setUserMessage] = useState ('')
 const sendMessage = async (e) => {
     e.preventDefault()
     const {uid, displayName} = auth.currentUser
@@ -21,11 +21,10 @@ const sendMessage = async (e) => {
         timestamp: serverTimestamp()
     })
 
-
 }
 
   return (
-    <form onSubmit={SendMessage} className={style.form}>
+    <form onSubmit={sendMessage} className={style.form}>
         <input value={userMessage}
         onChange={(e) => setUserMessage(e.target.value)}
         className={style.input} 
