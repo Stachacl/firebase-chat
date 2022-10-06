@@ -14,6 +14,7 @@ const [input, setInput] = useState ('')
   return (
     <form className={style.form}>
         <input value={input}
+        onChange={(e) => setInput(e.target.value)}
         className={style.input} 
         type="text" placeholder='Type something' />
         <button className={style.button} type="submit">Send</button>
