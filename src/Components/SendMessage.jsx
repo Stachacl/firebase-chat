@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { auth, db } from '../firebase'
 
 const  style = {
     form: `h-14 w-full max-w-[728px] flex text-xl absolute bottom-0`,
@@ -8,13 +9,18 @@ const  style = {
 
 const SendMessage = () => {
 
-const [input, setInput] = useState ('')
+const [userMessage, setUserMessage] = useState ('')
+const sendMessage = async (e) => {
+    e.preventDefault()
+    const {uid, displayName} = auth.currentUser
 
+
+}
 
   return (
-    <form className={style.form}>
-        <input value={input}
-        onChange={(e) => setInput(e.target.value)}
+    <form onSubmit={SendMessage} className={style.form}>
+        <input value={userMessage}
+        onChange={(e) => setUserMessage(e.target.value)}
         className={style.input} 
         type="text" placeholder='Type something' />
         <button className={style.button} type="submit">Send</button>
