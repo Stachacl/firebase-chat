@@ -1,3 +1,4 @@
+import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 import React, {useState} from 'react'
 import { auth, db } from '../firebase'
 
@@ -13,6 +14,12 @@ const [userMessage, setUserMessage] = useState ('')
 const sendMessage = async (e) => {
     e.preventDefault()
     const {uid, displayName} = auth.currentUser
+    await addDoc(collection(db, 'firebase-chat'), {
+        text: userMessage,
+        name: displayName,
+        uid,
+        timestamp: serverTimestamp()
+    })
 
 
 }
