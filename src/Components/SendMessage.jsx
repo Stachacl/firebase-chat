@@ -7,6 +7,10 @@ const  style = {
 }
 
 const SendMessage = () => {
+
+const [input, setInput] = useState ('')
+
+
   return (
     <form className={style.form}>
         <input className={style.input} 
