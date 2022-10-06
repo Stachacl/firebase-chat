@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const  style = {
     form: `h-14 w-full max-w-[728px] flex text-xl absolute bottom-0`,
