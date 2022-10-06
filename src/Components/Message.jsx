@@ -7,12 +7,12 @@ const style = {
     received:`bg-yellow text-black float-left rounded-br-full`,
 }
 
-const Message = () => {
+const Message = ({message}) => {
   return (
     <div>
         <div className={style.message}>
             <p className={style.name}>Stacha</p>
-            <p> I'm working on my chat app.</p>
+            <p>{message.text}</p>
 
         </div>
     </div>
