@@ -3,7 +3,6 @@ import { db } from "../firebase";
 import React, { useState, useEffect, useRef } from "react";
 import Message from "./Message";
 
-
 const style = {
   main: `flex flex-col p-[10px] relative`,
 };
@@ -28,7 +27,10 @@ const Chat = () => {
   return (
     <>
       <main className={style.main}>
-        <Message />
+        {messages &&
+          messages.map((message) => (
+            <Message key={message.id} message={message} />
+          ))}
       </main>
       {/* Send message component -form */}
       <span ref={scroll}></span>
