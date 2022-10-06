@@ -13,7 +13,8 @@ const [input, setInput] = useState ('')
 
   return (
     <form className={style.form}>
-        <input className={style.input} 
+        <input value={input}
+        className={style.input} 
         type="text" placeholder='Type something' />
         <button className={style.button} type="submit">Send</button>
     </form>
