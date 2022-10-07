@@ -15,7 +15,7 @@ const sendMessage = async (e) => {
     e.preventDefault()
 
     if (userMessage === '') {
-      alert ('Type something...')
+      return
     }
 
     const {uid, displayName} = auth.currentUser
@@ -25,6 +25,7 @@ const sendMessage = async (e) => {
         uid,
         timestamp: serverTimestamp()
     })
+    setUserMessage('')
 
 }
 
