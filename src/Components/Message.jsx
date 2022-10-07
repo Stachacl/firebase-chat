@@ -17,7 +17,7 @@ message.uid === auth.currentUser.uid
 
   return (
     <div>
-        <div className={style.message}>
+        <div className={`${style.message} ${messageClass}`}>
             <p className={style.name}>{message.name}</p>
             <p>{message.text}</p>
 
