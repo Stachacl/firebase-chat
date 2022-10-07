@@ -1,5 +1,5 @@
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
 import { auth, db } from '../firebase'
 
 const  style = {
@@ -7,6 +7,8 @@ const  style = {
     input: `w-full text-xl p-3 bg-gray-900 bg-opacity-80 text-white outline-none border-none`,
     button: `w-[20%] bg-indigo-400`
 }
+
+
 
 const SendMessage = ({scroll}) => {
 const [userMessage, setUserMessage] = useState ('');
@@ -18,6 +20,7 @@ const sendMessage = async (e) => {
       return
     }
     const {uid, displayName} = auth.currentUser
+
     await addDoc(collection(db, 'firebase-chat'), {
         text: userMessage,
         name: displayName,

@@ -14,7 +14,7 @@ const Navbar = () => {
 
   return (
     <div className={style.nav}>
-      <h1 className={style.heading}>Navbar</h1>
+      <h1 className={style.heading}>Chat App</h1>
       
       {user? <LogOut /> : <Signin /> }
  

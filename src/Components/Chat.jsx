@@ -1,17 +1,41 @@
-import { onSnapshot, query, collection, orderBy } from "firebase/firestore";
+import {
+  onSnapshot,
+  query,
+  collection,
+  orderBy,
+  limit,
+} from "firebase/firestore";
 import { db } from "../firebase";
 import React, { useState, useEffect, useRef } from "react";
 import Message from "./Message";
 import SendMessage from "./SendMessage";
 
 const style = {
-  main: `flex flex-col p-[10px] relative`,
+  main: `flex flex-col p-[10px] pb-[60px] relative overflow-y-auto`,
 };
 
-const Chat = () => {
-  const [messages, setMessages] = useState([]);
-  const scroll = useRef();
+// if (window.performance) {
+//   if (performance == 1) {
+//     alert( "This page is  now reloaded");
+//     // alert( "This page is reloaded" );
+//   } else {
+//     alert( "This page was reloaded");
 
+//   }
+// }
+const Chat = () => {
+  const elementToScrollTo = useRef();
+
+  const scrollToBottom = () => {
+    elementToScrollTo.current?.scrollIntoView({ behavior: "smooth" })
+  }
+
+  const [messages, setMessages] = useState([]);
+
+  useEffect(() => {
+    scrollToBottom()
+  }, [messages]);
+  
   useEffect(() => {
     const q = query(collection(db, "firebase-chat"), orderBy("timestamp"));
 
@@ -32,9 +56,9 @@ const Chat = () => {
           messages.map((message) => (
             <Message key={message.id} message={message} />
           ))}
+        <span ref={elementToScrollTo}></span>
       </main>
-      <SendMessage scroll={scroll}/>
-      <span ref={scroll}></span>
+      <SendMessage scroll={elementToScrollTo} />
     </>
   );
 };
