@@ -8,16 +8,15 @@ const  style = {
     button: `w-[20%] bg-blue-500`
 }
 
-const SendMessage = () => {
+const SendMessage = ({scroll}) => {
 const [userMessage, setUserMessage] = useState ('');
 
 const sendMessage = async (e) => {
     e.preventDefault()
-
+    //if there is no message typed into form - then return without doing anything//
     if (userMessage === '') {
       return
     }
-
     const {uid, displayName} = auth.currentUser
     await addDoc(collection(db, 'firebase-chat'), {
         text: userMessage,
@@ -25,7 +24,9 @@ const sendMessage = async (e) => {
         uid,
         timestamp: serverTimestamp()
     })
-    setUserMessage('')
+    setUserMessage(''); 
+
+    scroll.current.scrollIntoView({behavior: 'smooth'})
 
 }
 
