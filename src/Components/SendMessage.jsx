@@ -1,5 +1,5 @@
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
-import React, {useState, useRef} from 'react'
+import React, {useState} from 'react'
 import { auth, db } from '../firebase'
 
 const  style = {
