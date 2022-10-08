@@ -35,7 +35,7 @@ const sendMessage = async (e) => {
 
   return (
     <form onSubmit={sendMessage} className={style.form}>
-        <input value={userMessage}
+        <input value={userMessage} autoFocus
         onChange={(e) => setUserMessage(e.target.value)}
         className={style.input} 
         type="text" placeholder='Type something' />
