@@ -8,34 +8,30 @@ Designed with  Tailwind CSS.
 * [Live Demo](#live-demo)
 * [Technologies](#technologies)
 * [Scope of Functionalities](#scope-of-functionalities)
-* [Sources](#sources)
 
 ## General Info
-This project was made to practise working with Firebase data base, Authentification and Analitics.
+This project was made to practise working with Firebase Data Base,Firebase Authentification and Firebase Analitics.
 
-## Live Demo
-Please view the result here:
-https://stachacl.github.io/cocktails/
+## Chat screenshot:
 
-<img src="[https://ik.imagekit.io/stcl/github/Screen_Shot_cocktails_J6klTqg61.png?ik-sdk-version=javascript-1.4.3&updatedAt=1664511476112](https://ik.imagekit.io/stcl/chat/Screen_Shot_Chat_P6MPsjVQ_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1665217876897)">
+<img src="https://ik.imagekit.io/stcl/chat/Screen_Shot_Chat_P6MPsjVQ_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1665217876897">
 
 ## Technologies
 Technologies I used for this project:
 - React 
-- Bootstrap, CSS
+- Firebase 
+- Tailwind CSS
 
 
 ## Scope of Functionalities
-- Get a list of cocktails matching your search criteria
-- Open the cocktail details page
-- Navigate between different pages
-- Loaging state, when cocktails are loading
-- Error message
+- Log in via Coogle account to get in the chat room
+- Send messages
+- Receive messages
+- Log out while saving all messages
+- Form Autofocus
+- Scroll to the latest message
 
-## Sources
 
-### API 
-Data is fetching from the CocktailDB API [https://www.themealdb.com/api.php](https://www.thecocktaildb.com)
 
 
 
