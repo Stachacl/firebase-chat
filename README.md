@@ -14,7 +14,7 @@ This project was made to practise working with Firebase Data Base,Firebase Authe
 
 ## Chat screenshot:
 
-<img src="https://ik.imagekit.io/stcl/chat/Screen_Shot_Chat_P6MPsjVQ_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1665217876897">
+<img src="https://ik.imagekit.io/stcl/chat/screenshot_PVX_iiJrt?ik-sdk-version=javascript-1.4.3&updatedAt=1665218297650">
 
 ## Technologies
 Technologies I used for this project:
