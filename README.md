@@ -1,6 +1,7 @@
 # Firebase chat
 
-The chat app created with React, Firebase ( 30 days free trial). 
+The chat app created with React, Firebase (Created in September, using 30 days free trial). 
+
 Designed with  Tailwind CSS.
 
 ## Contents
@@ -27,10 +28,12 @@ Technologies I used for this project:
 - Log in via Coogle account to get in the chat room
 - Send messages
 - Receive messages
+- Different CSS styles for sent and received messages
 - Log out while saving all messages
 - Form Autofocus
-- Scroll to the latest message
+- Scroll to the latest message by default
 
+Background image source - Firebase marketing email.
 
 
 
