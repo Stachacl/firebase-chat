@@ -6,7 +6,6 @@ Designed with  Tailwind CSS.
 
 ## Contents
 * [General Info](#general-info)
-* [Live Demo](#live-demo)
 * [Technologies](#technologies)
 * [Scope of Functionalities](#scope-of-functionalities)
 
